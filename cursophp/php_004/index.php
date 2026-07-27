@@ -15,9 +15,7 @@
             echo "Olá, todos!";
         ?>
 
-   
-        <?= 
-            "Olá $nome, tudo bem?";
-        ?>
+    /**é assim que podemos escrever echo com php quando so tiver 1 echo */
+        <?="Olá $nome, tudo bem?";?>
 </body>
 </html>
