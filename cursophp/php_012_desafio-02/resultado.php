@@ -36,8 +36,8 @@
                 */
             e no echo sera assim
             
-                echo "<p>O número antecessor é: <strong>($num - 1)</strong></p>";
-                echo "<p>O número sucessor é: <strong>($num + 1)</strong></p>";
+                echo "<p>O número antecessor é: <strong>" . "($num - 1)" . "</strong></p>";
+                echo "<p>O número sucessor é: <strong>" . "($num + 1)" . "</strong></p>";
                 
             */
         -->
