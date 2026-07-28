@@ -17,7 +17,7 @@
         <h1>Calculadora do Tempo</h1>
 
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="GET">
-                <label for="temp">Informe o preço:</label>
+                <label for="temp">Informe os segundos:</label>
                 <Input type="number" name="temp" id="temp" value="<?= $num ?>">
          
                 <input type="submit" value="Analizar">
@@ -26,15 +26,25 @@
     <section id="resultado">
             <h2>Resultado da Operação</h2>
             <?php
-                $sec = 60;
-                $min = 360;
-                $hora = 2100;
-                $dia = 518400;
-                $dia = 3628800;
+                $min = $num/60;
 
-                $temporal =  $dia = 3628800;
+                $hora =  $min/60;
+                    //como calcular a hora outramente
+                    /**
+                    * $partInteiro = (int) $horaProv;
+                    * $partdecimal = $horaProv - $partInteiro;
+                    * $hora = ($partdecimal - $partdecimal) + $partInteiro;
+                    */
+                $dia = $hora/24;
+                $semana = $dia/7;
 
-                echo "O produto que custava <strong>$temporal</strong>"; 
+                print "Este valor equivale a:";
+                echo " <ul>
+                            <li> Minuto: <strong>" . number_format($min, 0, ",", " ") . "</strong> </li>
+                            <li> Hora: <strong>" . number_format($hora, 0, ",", " ") . "</strong> </li>
+                            <li> Dia(s): <strong>" . number_format($dia, 0, ",", " ") . "</strong> </li>
+                            <li> Semana(s): <strong>" . number_format($semana, 0, ",", " ") . "</strong> </li>
+                      </ul>"; 
             ?>
     </section>
 </body>
