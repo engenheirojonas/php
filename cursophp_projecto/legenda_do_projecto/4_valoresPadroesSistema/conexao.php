@@ -20,9 +20,6 @@
 
 
 //Variaveis globais
-    $nome_sistema = "GionaTecs";
+    $nome_sistema = "Sistema de Login";
     $email_sistema = "admin@gmail.com";
-    
-    /** $senha_sistema = "123";
-    *$senha_sistema_cripto = password_hash($senha_sistema, PASSWORD_DEFAULT); //criptografando a senha padrao do usuario padrao */
 ?>
