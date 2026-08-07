@@ -17,7 +17,7 @@
 			*	Ou usando variaveis globais definidos desde o arquivo conexao.php, que é mais seguro, pois caso eu queira mudar o email e senha do usuario padrao, eu posso mudar apenas no arquivo conexao.php, sem precisar mudar em todos os arquivos que usam o usuario padrao.
 		*/
 
-		$pdo->query("INSERT INTO usuarios SET nome = '$nome_sistema', email = '$email_sistema', senha = '$senha_sistema', senha_cripto = '$senha_sistema_cripto', nivel = 'Administrador', ativo = 'Sim' ");
+		$pdo->query("INSERT INTO usuarios SET nome = '$nome_sistema', email = '$email_sistema', senha = '$senha_sistema', senha_cripto = '$senha_sistema_cripto', nivel = 'Administrador', ativo = 'Sim', foto='sem-foto.jpg', telefone = '$telefone_sistema'");
 	}
 
 ?>
