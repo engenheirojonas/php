@@ -24,6 +24,7 @@ if($linhas > 0){
 	$senha_usuario = $res[0]['senha_cripto'];
 	$foto_usuario = $res[0]['foto'];
 	$telefone_usuario = $res[0]['telefone'];
+	$endereco_usuario = $res[0]['endereco'];
 }
 
 ?>
@@ -130,7 +131,7 @@ if($linhas > 0){
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<h1><a class="navbar-brand" href="index.php"><span class="fa fa-cutlery"></span> Sistema<span class="dashboard_text">Nome do Sistema</span></a></h1>
+						<h1><a class="navbar-brand" href="index.php"><i class="fa fa-university" aria-hidden="true"></i> Sistema<span class="dashboard_text">Nome do Sistema</span></a></h1>
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="sidebar-menu">
@@ -263,7 +264,7 @@ if($linhas > 0){
 
 
 
-		<!-- main content start-->
+			<!-- main content start-->
 		<div id="page-wrapper">
 			<?php 
 			require_once('paginas/'.$pagina.'.php');
@@ -381,7 +382,7 @@ if($linhas > 0){
 
 						<div class="col-md-4">							
 								<label>Confirmar Senha</label>
-								<input type="password" class="form-control" id="conf_senha_perfil" name="conf_senha" placeholder="Confirmar Senha" value="" required>							
+								<input type="password" class="form-control" id="conf_senha_perfil" name="conf_senha" placeholder="Confirmar Senha" value="" >							
 						</div>
 
 					</div>
@@ -389,17 +390,21 @@ if($linhas > 0){
 
 
 					<div class="row">
-						
+						<div class="col-md-12">
+							<label>Endereço</label>	
+							<input type="text" class="form-control" id="endereco_perfil" name="endereco" placeholder="Seu Endereço" value="<?php echo $endereco_usuario ?>" >
+
+						</div>	
 					</div>
 
 
 					<div class="row">
-						<div class="col-md-6">							
+						<div class="col-md-8">							
 								<label>Foto</label>
 								<input type="file" class="form-control" id="foto_perfil" name="foto" value="<?php echo $foto_usuario ?>" onchange="carregarImgPerfil()">							
 						</div>
 
-						<div class="col-md-6">								
+						<div class="col-md-4">								
 							<img src="images/perfil/<?php echo $foto_usuario ?>"  width="80px" id="target-usu">								
 							
 						</div>
@@ -563,7 +568,7 @@ if($linhas > 0){
 
 
 
-
+//carregar uma imagem de perfil antes de enviar para o banco de dados, veja o seu html nas linhas 401 ate 410.
 
 <script type="text/javascript">
 	function carregarImgPerfil() {
