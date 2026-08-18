@@ -110,12 +110,25 @@ if($linhas > 0){
 				}
 			});
 
-
 		});
 
 	</script>
 	<!-- //pie-chart --><!-- index page sales reviews visitors pie chart -->
 
+
+<!---------------------DataTables CSS and JS ----------------->
+
+	<link href="https://cdn.datatables.net/v/dt/dt-3.0.1/datatables.min.css" rel="stylesheet" integrity="sha384-1z3BkqkX8Kh4v3qQlL2xEzxIMj8RupOgGJh4x7NQUolysp8oGApx7DKpP7xW0Ynh" crossorigin="anonymous">
+
+	<script src="https://cdn.datatables.net/v/dt/dt-3.0.1/datatables.min.js" integrity="sha384-4KvBx+ygRyZ/XBcprEmKhIFo1BLD5rDlrEQvevVh0Rw32ZXTvv6RzbWTkTyzvJYK" crossorigin="anonymous"></script>
+	<script>
+	// Initialise a DataTable
+	const table = new DataTable('#myTable', {
+		// Options
+	});
+	</script>
+
+<!----------------------------------------------------------->
 	
 </head> 
 <body class="cbp-spmenu-push">
@@ -131,7 +144,7 @@ if($linhas > 0){
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<h1><a class="navbar-brand" href="index.php"><i class="fa fa-university" aria-hidden="true"></i> Sistema<span class="dashboard_text">Nome do Sistema</span></a></h1>
+						<h1><a class="navbar-brand" href="index.php"><i class="fa fa-globe"></i> Sistema<span class="dashboard_text">Nome do Sistema</span></a></h1>
 					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="sidebar-menu">
