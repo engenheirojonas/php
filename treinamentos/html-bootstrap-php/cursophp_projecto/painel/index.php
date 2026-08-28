@@ -34,7 +34,7 @@ if($linhas > 0){
 	<title>Nome Sistema</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="shortcut icon" href="" type="image/x-icon">
+	<link rel="shortcut icon" href="../img/icone.png" type="image/x-icon">
 
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
@@ -118,17 +118,12 @@ if($linhas > 0){
 
 <!---------------------DataTables CSS and JS ----------------->
 
-	<link href="https://cdn.datatables.net/v/dt/dt-3.0.1/datatables.min.css" rel="stylesheet" integrity="sha384-1z3BkqkX8Kh4v3qQlL2xEzxIMj8RupOgGJh4x7NQUolysp8oGApx7DKpP7xW0Ynh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.13.2/datatables.min.css"/>
 
-	<script src="https://cdn.datatables.net/v/dt/dt-3.0.1/datatables.min.js" integrity="sha384-4KvBx+ygRyZ/XBcprEmKhIFo1BLD5rDlrEQvevVh0Rw32ZXTvv6RzbWTkTyzvJYK" crossorigin="anonymous"></script>
-	<script>
-	// Initialise a DataTable
-	const table = new DataTable('#myTable', {
-		// Options
-	});
-	</script>
-
+	<script src="https://cdn.datatables.net/v/dt/dt-1.13.2/datatables.min.js"></script>
 <!----------------------------------------------------------->
+
+
 	
 </head> 
 <body class="cbp-spmenu-push">
@@ -341,7 +336,7 @@ if($linhas > 0){
 
 
 	<!-- Mascaras JS -->
-<script type="text/javascript" src="../../js/mascaras.js"></script>
+<script type="text/javascript" src="js/mascaras.js"></script>
 
 <!-- Ajax para funcionar Mascaras JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script> 
@@ -349,101 +344,6 @@ if($linhas > 0){
 	
 </body>
 </html>
-
-
-
-
-
-
-<!-- Modal Perfil -->
-<div class="modal fade" id="modalPerfil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h4 class="modal-title" id="exampleModalLabel">Alterar Dados</h4>
-				<button id="btn-fechar-perfil" type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top: -25px">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<form id="form-perfil">
-			<div class="modal-body">
-				
-
-					<div class="row">
-						<div class="col-md-6">							
-								<label>Nome</label>
-								<input type="text" class="form-control" id="nome_perfil" name="nome" placeholder="Seu Nome" value="<?php echo $nome_usuario ?>" required>							
-						</div>
-
-						<div class="col-md-6">							
-								<label>Email</label>
-								<input type="email" class="form-control" id="email_perfil" name="email" placeholder="Seu Nome" value="<?php echo $email_usuario ?>" required>							
-						</div>
-					</div>
-
-
-					<div class="row">
-						<div class="col-md-4">							
-								<label>Telefone</label>
-								<input type="text" class="form-control" id="telefone_perfil" name="telefone" placeholder="Seu Telefone" value="<?php echo $telefone_usuario ?>" required>							
-						</div>
-
-						<div class="col-md-4">							
-								<label>Senha</label>
-								<input type="password" class="form-control" id="senha_perfil" name="senha" placeholder="Senha" value="<?php echo $senha_usuario ?>" required>							
-						</div>
-
-						<div class="col-md-4">							
-								<label>Confirmar Senha</label>
-								<input type="password" class="form-control" id="conf_senha_perfil" name="conf_senha" placeholder="Confirmar Senha" value="" >							
-						</div>
-
-					</div>
-
-
-
-					<div class="row">
-						<div class="col-md-12">
-							<label>Endereço</label>	
-							<input type="text" class="form-control" id="endereco_perfil" name="endereco" placeholder="Seu Endereço" value="<?php echo $endereco_usuario ?>" >
-
-						</div>	
-					</div>
-
-
-					<div class="row">
-						<div class="col-md-8">							
-								<label>Foto</label>
-								<input type="file" class="form-control" id="foto_perfil" name="foto" value="<?php echo $foto_usuario ?>" onchange="carregarImgPerfil()">							
-						</div>
-
-						<div class="col-md-4">								
-							<img src="images/perfil/<?php echo $foto_usuario ?>"  width="80px" id="target-usu">								
-							
-						</div>
-
-						
-					</div>
-
-
-					<input type="hidden" name="id_usuario" value="<?php echo $id_usuario ?>">
-				
-
-				<br>
-				<small><div id="msg-perfil" align="center"></div></small>
-			</div>
-			<div class="modal-footer">       
-				<button type="submit" class="btn btn-primary">Salvar</button>
-			</div>
-			</form>
-		</div>
-	</div>
-</div>
-
-
-
-
-
 
 
 

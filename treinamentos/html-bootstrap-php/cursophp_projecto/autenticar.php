@@ -19,6 +19,7 @@
 
 	if($linhas > 0){
 
+			//verifica se o usuario esta ativo, caso nao esteja ele vai mostrar uma mensagem de alerta e vai redirecionar para a pagina de login
 		if($res[0]['ativo'] != 'Sim'){
 			echo '<script>window.alert("Seu acesso foi desativado!!")</script>'; 
 			echo '<script>window.location="index.php"</script>';  
